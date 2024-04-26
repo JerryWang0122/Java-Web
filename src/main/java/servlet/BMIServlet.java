@@ -12,7 +12,7 @@ import java.io.IOException;
 public class BMIServlet extends HttpServlet {
     // TODO: 上午最後
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 編碼
         resp.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");

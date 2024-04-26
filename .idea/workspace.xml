@@ -9,16 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: project init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/BMIServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: complete bmi calculate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/BMIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/BMIServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bmi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bmi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,7 +76,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "http.proxy",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714100662676</updated>
       <workItem from="1714100663716" duration="1622000" />
-      <workItem from="1714102312800" duration="5433000" />
+      <workItem from="1714102312800" duration="6358000" />
     </task>
     <task id="LOCAL-00001" summary="feat: project init">
       <option name="closed" value="true" />
@@ -143,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714100708231</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: complete bmi calculate">
+      <option name="closed" value="true" />
+      <created>1714110535820</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714110535820</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +162,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: project init" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: project init" />
+    <MESSAGE value="feat: complete bmi calculate" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: complete bmi calculate" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

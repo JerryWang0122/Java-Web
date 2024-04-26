@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: complete bmi calculate">
+    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: change to post">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/BMRServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/BMIServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/BMIServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/bmi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bmi.html" afterDir="false" />
@@ -76,7 +77,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,6 +99,24 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61540" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -136,7 +156,9 @@
       <option name="presentableId" value="Default" />
       <updated>1714100662676</updated>
       <workItem from="1714100663716" duration="1622000" />
-      <workItem from="1714102312800" duration="6358000" />
+      <workItem from="1714102312800" duration="9699000" />
+      <workItem from="1714114616443" duration="67000" />
+      <workItem from="1714114695043" duration="3929000" />
     </task>
     <task id="LOCAL-00001" summary="feat: project init">
       <option name="closed" value="true" />
@@ -154,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714110535820</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: change to post">
+      <option name="closed" value="true" />
+      <created>1714111302700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714111302700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +193,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: project init" />
     <MESSAGE value="feat: complete bmi calculate" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: complete bmi calculate" />
+    <MESSAGE value="feat: change to post" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change to post" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

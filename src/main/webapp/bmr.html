@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BMR Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding: 15px;">
+  <h2>
+    <pre>
+      * 寫一個基礎代謝率(BMR)計算機
+      * 使用者輸入性別、年齡、身高、體重可以得到 BMR 值
+      * 公式:
+      * 男性: BMR = 66 + (13.7 * 體重(kg)) + (5 * 身高(cm)) - (6.8 * 年齡)
+      * 女性: BMR = 655 + (9.6 * 體重(kg)) + (1.8 * 身高(cm)) - (4.7 * 年齡)
+    </pre>
+  </h2>
+  
+  <!-- bmr form -->
+  <form action="/JavaWeb_war_exploded/servlet/bmr" method="post" target="result">
+    <fieldset>
+      <legend class="fs-3">BMR Calculator</legend>
+
+      姓名：<input class="form-control w-25" id="userName" name="userName" placeholder="請輸入姓名" required type="text"><br>
+
+      性別：
+      <input class="form-check-input" id="userSex1" name="userSex" required type="radio" value="1">男
+      <input class="form-check-input" id="userSex2" name="userSex" required type="radio" value="0">女
+      <br>
+
+      年齡：<input class="form-control w-25" id="userAge" max="150" min="1" name="userAge" placeholder="請輸入年齡" required type="number"><br>
+
+      身高：<input class="form-control w-25" id="userHeight" max="300" min="70" name="userHeight" placeholder="請輸入身高(公分)" required type="number"><br>
+
+      體重：<input class="form-control w-25" id="userWeight" max="300" min="20" name="userWeight" placeholder="請輸入體重(公斤)" required type="number"><br>
+
+      <button class="btn" type="reset">重置</button>
+      <input class="btn btn-primary" type="submit" value="傳送">
+    </fieldset>
+  </form>
+
+  <!-- BMR 結果使用 iframe -->
+  <iframe frameborder="0" id="result" name="result"></iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

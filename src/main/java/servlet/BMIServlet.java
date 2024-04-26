@@ -37,7 +37,7 @@ public class BMIServlet extends HttpServlet {
 
         resp.getWriter().print("<body>");
 
-        resp.getWriter().print("<table>");
+        resp.getWriter().print("<table border='1'>");
         resp.getWriter().print("<thead>");
         resp.getWriter().print("<tr>");
         resp.getWriter().print("<th>Name</th>");
@@ -48,18 +48,19 @@ public class BMIServlet extends HttpServlet {
         resp.getWriter().print("</thead>");
 
         resp.getWriter().print("<tbody>");
-        resp.getWriter().print("<tr>");
+
         bmiList.forEach(map -> {
             try {
+                resp.getWriter().print("<tr>");
                 resp.getWriter().print("<td>" + map.get("name")+ "</td>");
                 resp.getWriter().print("<td>" + map.get("height")+ "</td>");
                 resp.getWriter().print("<td>" + map.get("weight")+ "</td>");
                 resp.getWriter().print("<td>" + map.get("bmi")+ "</td>");
+                resp.getWriter().print("</tr>");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-        resp.getWriter().print("</tr>");
         resp.getWriter().print("</tbody>");
 
         resp.getWriter().print("</table>");

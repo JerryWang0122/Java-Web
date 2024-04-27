@@ -33,11 +33,13 @@ public class BMIServlet extends HttpServlet {
         // 回應內容(含HTML)
         resp.getWriter().print("<html>");
         resp.getWriter().print("<head>");
+        resp.getWriter().print("<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">");
+
         resp.getWriter().print("</head>");
 
-        resp.getWriter().print("<body>");
+        resp.getWriter().print("<body class='p-5'>");
 
-        resp.getWriter().print("<table border='1'>");
+        resp.getWriter().print("<table class='table table-striped'>");
         resp.getWriter().print("<thead>");
         resp.getWriter().print("<tr>");
         resp.getWriter().print("<th>Name</th>");
@@ -64,6 +66,8 @@ public class BMIServlet extends HttpServlet {
         resp.getWriter().print("</tbody>");
 
         resp.getWriter().print("</table>");
+        resp.getWriter().print("<br>");
+        resp.getWriter().print("<a href='/JavaWeb_war_exploded/bmi.html' class='btn btn-primary'>回上一頁</a>");
 
         resp.getWriter().print("</body>");
 

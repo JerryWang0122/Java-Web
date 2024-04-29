@@ -20,6 +20,13 @@ public class GuestBookController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 處理刪除 deleteId
+        String deleteId = req.getParameter("deleteId");
+        if (deleteId != null) {
+            int id = Integer.parseInt(deleteId);
+            service.removeById(id);
+        }
+
         // 取得所有留言紀錄
         List<GuestBook> guestBooks = service.queryAll();
         req.setAttribute("guestBooks", guestBooks);

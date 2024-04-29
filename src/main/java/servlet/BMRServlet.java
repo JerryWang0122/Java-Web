@@ -1,5 +1,6 @@
 package servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,6 +11,17 @@ import java.io.IOException;
 
 @WebServlet("/servlet/bmr")
 public class BMRServlet extends HttpServlet {
+
+    // 紀錄查詢
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 處理資料
+
+        // 將資料分派到 jsp
+        RequestDispatcher rd = req.getRequestDispatcher("/bmr_list.jsp");
+        rd.forward(req, resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 支援utf-8 外文(中、韓、日...)輸入

@@ -8,14 +8,23 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @WebServlet("/servlet/bmr")
 public class BMRServlet extends HttpServlet {
+    // 存放bmr的歷史紀錄
+    private List<Map<String, Object>> bmrList = new CopyOnWriteArrayList<>();
 
     // 紀錄查詢
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 處理資料
+        // 透過 setAttribute 將 bmrList 放到 req 屬性中的技術
+        // 就可以將 bmrList 傳遞給 jsp
+        req.setAttribute("bmrList", bmrList);
 
         // 將資料分派到 jsp
         RequestDispatcher rd = req.getRequestDispatcher("/bmr_list.jsp");
@@ -30,6 +39,7 @@ public class BMRServlet extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
 
         // get parameters
+        String userName = req.getParameter("userName");
         String userSex = req.getParameter("userSex");
         String userAge = req.getParameter("userAge");
         String userHeight = req.getParameter("userHeight");
@@ -48,6 +58,18 @@ public class BMRServlet extends HttpServlet {
                 bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
                 break;
         }
+
+        // 建立 Map 集合，放置表單資訊與bmr內容
+        Map<String, Object> map = new LinkedHashMap<>();
+        map.put("name", userName);
+        map.put("gender", userSex);
+        map.put("age", userAge);
+        map.put("height", height);
+        map.put("weight", weight);
+        map.put("bmr", bmr);
+
+        // 將資料儲存到bmrList集合中
+        bmrList.add(map);
 
         resp.getWriter().print("BMR Result = " + bmr);
     }

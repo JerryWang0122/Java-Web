@@ -1,5 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="guestbook.model.GuestBook" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%--
   Created by IntelliJ IDEA.
   User: jerrywang
@@ -9,7 +11,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
+<%!
+    // ！定義物件
+    // 內部內容為 -> 物件屬性和物件方法
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private String dateFormat (Date date) {
+        return date == null ? "" : sdf.format(date);
+    }
+%>
+
 <%
+    // 產生區域變數
     List<GuestBook> guestBooks = (List)request.getAttribute("guestBooks");
 %>
 <!-- 留言列表 -->
@@ -34,8 +46,8 @@
                         <td><%=gb.getId()%></td>
                         <td><%=gb.getUserName()%></td>
                         <td><%=gb.getContent()%></td>
-                        <td><%=gb.getCreateDate()%></td>
-                        <td><%=gb.getUpdateDate()%></td>
+                        <td><%=dateFormat(gb.getCreateDate())%></td>
+                        <td><%=dateFormat(gb.getUpdateDate())%></td>
                         <td><a href="/JavaWeb_war_exploded/guestbook?deleteId=<%=gb.getId()%>" class="btn btn-danger">Delete</a></td>
                     </tr>
                 <% } %>

@@ -23,7 +23,8 @@ public class GuestBookController extends HttpServlet {
         // 處理刪除 deleteId
         String deleteId = req.getParameter("deleteId");
         if (deleteId != null) {
-            int id = Integer.parseInt(deleteId);
+            // int id = Integer.parseInt(deleteId);
+            Integer id = Integer.valueOf(deleteId);
             service.removeById(id);
         }
 

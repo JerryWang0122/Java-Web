@@ -1,0 +1,45 @@
+<%@ page import="java.util.List" %>
+<%@ page import="guestbook.model.GuestBook" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: jerrywang
+  Date: 2024/4/29
+  Time: 3:29 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+
+<%
+    List<GuestBook> guestBooks = (List)request.getAttribute("guestBooks");
+%>
+<!-- 留言列表 -->
+<div>
+    <fieldset>
+        <legend>GuestBook List</legend>
+        <table class='table table-striped table-bordered'>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Content</th>
+                <th>Create Date</th>
+                <th>Update Date</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <% for (GuestBook gb : guestBooks) { %>
+                    <tr>
+                        <td><%=gb.getId()%></td>
+                        <td><%=gb.getUserName()%></td>
+                        <td><%=gb.getContent()%></td>
+                        <td><%=gb.getCreateDate()%></td>
+                        <td><%=gb.getUpdateDate()%></td>
+                        <td><a href="/JavaWeb_war_exploded/guestbook?deleteId=<%=gb.getId()%>" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </fieldset>
+</div>

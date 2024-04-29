@@ -21,6 +21,15 @@ public class BMRServlet extends HttpServlet {
     // 紀錄查詢
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 是否有 deleteId 參數帶入?
+        String deleteId = req.getParameter("deleteId");
+        if (deleteId != null) {
+            // 將deleteId 轉成 int
+            int id = Integer.parseInt(deleteId);
+            // 刪除指定id位置的紀錄
+            bmrList.remove(id);
+        }
+
         // 處理資料
         // 透過 setAttribute 將 bmrList 放到 req 屬性中的技術
         // 就可以將 bmrList 傳遞給 jsp

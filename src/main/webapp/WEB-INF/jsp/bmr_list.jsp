@@ -45,7 +45,7 @@
                     <td><%=map.get("age") %></td>
                     <td><%=map.get("height") %></td>
                     <td><%=map.get("weight") %></td>
-                    <td><%=map.get("age") %></td>
+                    <td><%=map.get("bmr") %></td>
                     <td><a href="/JavaWeb_war_exploded/servlet/bmr?deleteId=<%=i %>" class="btn btn-danger">Delete</a> </td>
                 </tr>
                 <% } %>

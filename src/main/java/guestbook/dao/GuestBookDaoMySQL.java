@@ -42,9 +42,11 @@ public class GuestBookDaoMySQL implements GuestBookDao{
         // 絕對不要 select *
         String sql = "select id, username, content, create_date, update_date from guestbook where id = ?";
         try {
+            // queryForObject 是針對個體
             GuestBook guestBook = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(GuestBook.class), id);
             return guestBook;
         } catch (DataAccessException e) {
+            // 訪問不到資料時
             return null;
         }
     }
@@ -52,6 +54,7 @@ public class GuestBookDaoMySQL implements GuestBookDao{
     @Override
     public List<GuestBook> findAll() {
         String sql = "select id, username, content, create_date, update_date from guestbook order by id";
+        // query 則是針對群組
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(GuestBook.class));
     }
 

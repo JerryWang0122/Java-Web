@@ -2,13 +2,15 @@ package guestbook.service;
 
 import guestbook.dao.GuestBookDao;
 import guestbook.dao.GuestBookDaoInMemory;
+import guestbook.dao.GuestBookDaoMySQL;
 import guestbook.model.GuestBook;
 
 import java.util.List;
 
 public class GuestBookServiceImpl implements GuestBookService{
 
-    private GuestBookDao dao = new GuestBookDaoInMemory();
+//    private GuestBookDao dao = new GuestBookDaoInMemory();
+    private GuestBookDao dao = new GuestBookDaoMySQL();
     @Override
     public boolean add(String userName, String content) {
         GuestBook gb = new GuestBook(userName, content);

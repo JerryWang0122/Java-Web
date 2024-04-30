@@ -36,6 +36,7 @@
                 <th>Content</th>
                 <th>Create Date</th>
                 <th>Update Date</th>
+                <th>Update</th>
                 <th>Delete</th>
             </tr>
             </thead>
@@ -48,6 +49,7 @@
                         <td><%=gb.getContent()%></td>
                         <td><%=dateFormat(gb.getCreateDate())%></td>
                         <td><%=dateFormat(gb.getUpdateDate())%></td>
+                        <td><a href="/JavaWeb_war_exploded/guestbook?updateId=<%=gb.getId()%>" class="btn btn-success">Update</a></td>
                         <td><a href="/JavaWeb_war_exploded/guestbook?deleteId=<%=gb.getId()%>" class="btn btn-danger">Delete</a></td>
                     </tr>
                 <% } %>

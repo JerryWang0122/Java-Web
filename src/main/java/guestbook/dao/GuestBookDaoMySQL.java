@@ -48,6 +48,7 @@ public class GuestBookDaoMySQL implements GuestBookDao{
             return guestBook;
         } catch (DataAccessException e) {
             // 訪問不到資料時
+            e.printStackTrace();
             return null;
         }
     }

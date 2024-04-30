@@ -2,6 +2,7 @@ package guestbook.controller;
 
 import guestbook.model.GuestBook;
 import guestbook.service.GuestBookService;
+import guestbook.service.GuestBookServiceImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,7 +15,7 @@ import java.io.IOException;
 @WebServlet("/guestbook/update")
 public class GuestBookUpdateController extends HttpServlet {
 
-    private GuestBookService guestBookService;
+    private GuestBookService guestBookService = new GuestBookServiceImpl();
 
     // 修改指向頁面
     @Override

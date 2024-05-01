@@ -28,16 +28,11 @@
                 Booking Room Name：
                 <select class="form-select w-25" name="room_id" id="room_id">
                     <c:forEach items="${rooms}" var="room">
-                        <%-- 當 dto.bookingId == room.roomId 時，選擇該項  --%>
-                        <c:choose>
-                            <c:when test="${bookingRoom.roomId == room.roomId}">
-                                <option value="${room.roomId}" selected>${room.roomName}</option>
-                            </c:when>
-                            <c:otherwise>
-                                <option value="${room.roomId}">${room.roomName}</option>
-                            </c:otherwise>
-                        </c:choose>
-
+                        <%-- 當 bookingRoom.roomId == room.roomId 時，選擇該項  --%>
+                        <option value="${room.roomId}"
+                                <c:if test="${bookingRoom.roomId == room.roomId}">selected</c:if>>
+                                ${room.roomName}
+                        </option>
                     </c:forEach>
                 </select><br>
 

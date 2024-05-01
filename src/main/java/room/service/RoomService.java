@@ -4,6 +4,8 @@ import room.dao.RoomDao;
 import room.dao.RoomDaoImpl;
 import room.model.po.Room;
 
+import java.util.List;
+
 public class RoomService {
     private RoomDao roomDao = new RoomDaoImpl();
 
@@ -14,6 +16,10 @@ public class RoomService {
 
     public Room getRoom (Integer roomId) {
         return roomDao.findById(roomId);
+    }
+
+    public List<Room> getRooms() {
+        return roomDao.findAll();
     }
 
     public boolean updateRoom(Integer roomId, String roomName) {

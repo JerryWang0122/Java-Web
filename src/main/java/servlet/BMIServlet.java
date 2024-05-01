@@ -14,7 +14,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 @WebServlet("/servlet/bmi")
 public class BMIServlet extends HttpServlet {
-    // TODO: 上午最後
 
     // 存放bmi的歷史紀錄
     private List<Map<String, Object>> bmiList = new CopyOnWriteArrayList<>();

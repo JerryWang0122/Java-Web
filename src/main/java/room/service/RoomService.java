@@ -17,6 +17,11 @@ public class RoomService {
     }
 
     public boolean updateRoom(Integer roomId, String roomName) {
+        Room room = new Room(roomId, roomName);
+        return roomDao.update(roomId, room) > 0;
+    }
 
+    public boolean deleteRoom(Integer roomId) {
+        return roomDao.delete(roomId) > 0;
     }
 }

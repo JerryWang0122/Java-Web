@@ -25,7 +25,7 @@ public class BookingRoomService {
             checkinDate = new SimpleDateFormat("yyyy-MM-dd").parse(checkinDateString);
             bookingRoom.setCheckinDate(checkinDate);
         } catch (ParseException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return bookingRoomDao.create(bookingRoom) > 0;

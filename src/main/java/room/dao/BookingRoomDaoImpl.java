@@ -52,6 +52,7 @@ public class BookingRoomDaoImpl implements BookingRoomDao{
 
     @Override
     public int delete(Integer bookingId) {
-        return 0;
+        String sql = "delete from booking_room where booking_id = ?";
+        return jdbcTemplate.update(sql, bookingId);
     }
 }

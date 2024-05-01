@@ -4,6 +4,11 @@
 | HTML | --> | Controller | -->  | Service | --> | DAO | --> MySQL(room, booking_room)
 +------+     +------------+      +---------+     +-----+
 
++-----------------+     +----------------------+     +-------------+     +---------+
+| room.jsp        | --> | RoomController       | --> | RoomService | --> | RoomDao | --> MySQL(room)
+| room_update.jsp | --> | RoomUpdateController |     +-------------+     +---------+
++-----------------+     +----------------------+
+
 model
  |-po (對應資料表的紀錄) (persistent object)
    |-Room.java
@@ -16,3 +21,11 @@ dao
  |-RoomDaoImpl.java
  |-BookingRoomDao.java (interface)
  |-BookingRoomDaoImpl.java
+
+service
+ |-RoomService.java
+ |-BookingRoomService.java
+
+controller
+ |-RoomController.java
+ |-RoomUpdateController.java

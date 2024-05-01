@@ -62,13 +62,15 @@
                             <td>${ bookingRoomDto.userId }</td>
                             <td>${ bookingRoomDto.checkinDate }</td>
                             <td>${ bookingRoomDto.createTime }</td>
-                            <td><a href="/JavaWeb_war_exploded/room/update?roomId=${room.roomId}" class="btn btn-success">修改</a></td>
-                            <td><a href="/JavaWeb_war_exploded/room?deleteId＝${room.roomId}" class="btn btn-danger">刪除</a></td>
+                            <td><a href="/JavaWeb_war_exploded/booking_room/update?bookingId=${bookingRoomDto.bookingId}" class="btn btn-success">修改</a></td>
+                            <td><a href="/JavaWeb_war_exploded/booking_room?deleteId=${bookingRoomDto.bookingId}" class="btn btn-danger">刪除</a></td>
                         </tr>
                     </c:forEach>
                 </tbody>
             </table>
         </div>
+
+        <a class="btn btn-primary" href="/JavaWeb_war_exploded">回首頁</a>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     </body>

@@ -47,7 +47,8 @@ public class BookingRoomDaoImpl implements BookingRoomDao{
     public int update(Integer bookingId, BookingRoom bookingRoom) {
         String sql = "update booking_room set room_id = ?, user_id = ?, " +
                 "checkin_date = ? where booking_id = ?";
-        return jdbcTemplate.update(sql, bookingRoom.getBookingId());
+        return jdbcTemplate.update(sql, bookingRoom.getRoomId(), bookingRoom.getUserId(),
+                bookingRoom.getCheckinDate(), bookingId);
     }
 
     @Override

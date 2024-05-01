@@ -26,10 +26,9 @@
 
                 Room Name：
                 <select class="form-select w-25" name="room_id" id="room_id">
-                    <option value="101">101室</option>
-                    <option value="202">202室</option>
-                    <option value="303">303室</option>
-                    <option value="404">404室</option>
+                    <c:forEach items="${rooms}" var="room">
+                        <option value="${room.roomId}">${room.roomName}</option>
+                    </c:forEach>
                 </select><br>
 
                 Check In: <input class="form-control w-25" type="date" name="checkin_date" id="checkin_date"><br>
@@ -48,6 +47,7 @@
                         <th>Room Name</th>
                         <th>User Id</th>
                         <th>Check In</th>
+                        <th>Create Time</th>
                         <th>修改</th>
                         <th>刪除</th>
                     </tr>
@@ -61,8 +61,9 @@
                             <td>${ bookingRoomDto.room.roomName }</td>
                             <td>${ bookingRoomDto.userId }</td>
                             <td>${ bookingRoomDto.checkinDate }</td>
-                            <td></td>
-                            <td></td>
+                            <td>${ bookingRoomDto.createTime }</td>
+                            <td><a href="/JavaWeb_war_exploded/room/update?roomId=${room.roomId}" class="btn btn-success">修改</a></td>
+                            <td><a href="/JavaWeb_war_exploded/room?deleteId＝${room.roomId}" class="btn btn-danger">刪除</a></td>
                         </tr>
                     </c:forEach>
                 </tbody>

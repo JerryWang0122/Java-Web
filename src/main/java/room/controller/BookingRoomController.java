@@ -42,7 +42,11 @@ public class BookingRoomController extends HttpServlet {
             bookingRoomDtos.add(dto);
         }
 
+        // room 列表
+        List<Room> rooms = roomService.getRooms();
+
         req.setAttribute("bookingRoomDtos", bookingRoomDtos);
+        req.setAttribute("rooms", rooms);
 
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/booking_room.jsp");
         rd.forward(req, resp);

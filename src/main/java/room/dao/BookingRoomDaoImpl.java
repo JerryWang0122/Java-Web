@@ -3,6 +3,7 @@ package room.dao;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import room.model.dto.BookingRoomCount;
 import room.model.po.BookingRoom;
 
 import java.util.List;
@@ -34,6 +35,15 @@ public class BookingRoomDaoImpl implements BookingRoomDao{
         String sql = "select booking_id, room_id, user_id, checkin_date, create_time " +
                         "from booking_room where user_id = ?";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(BookingRoom.class), userId);
+    }
+
+    @Override
+    public List<BookingRoomCount> getBookingRoomCounts() {
+        String sql = "SELECT r.room_id, r.room_name, " +
+                "COALESCE(COUNT(b.booking_id), 0) AS booking_count FROM room r " +
+                "LEFT JOIN booking_room b ON r.room_id = b.room_id " +
+                "GROUP BY r.room_id, r.room_name";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(BookingRoomCount.class));
     }
 
     @Override

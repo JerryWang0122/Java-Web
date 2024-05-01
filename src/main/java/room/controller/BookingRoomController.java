@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import room.model.dto.BookingRoomCount;
 import room.model.dto.BookingRoomDto;
 import room.model.po.BookingRoom;
 import room.model.po.Room;
@@ -53,8 +54,10 @@ public class BookingRoomController extends HttpServlet {
 
         // room 列表
         List<Room> rooms = roomService.getRooms();
+        List<BookingRoomCount> bookingRoomCounts = bookingRoomService.getBookingRoomCounts();
 
         req.setAttribute("bookingRoomDtos", bookingRoomDtos);
+        req.setAttribute("bookingRoomCounts", bookingRoomCounts);
         req.setAttribute("rooms", rooms);
 
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/booking_room.jsp");

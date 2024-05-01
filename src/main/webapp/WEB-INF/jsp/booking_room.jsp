@@ -70,6 +70,32 @@
             </table>
         </div>
 
+        <%-- BookingRoomCounts 列表 --%>
+        <div class="col-10 mt-5">
+            <fieldset>
+                <legend class="fs-3">統計列表</legend>
+                <table class='table table-dark text-center table-striped table-bordered'>
+                    <thead>
+                        <tr>
+                            <th>Room Id</th>
+                            <th>Room Name</th>
+                            <th>Booking Count</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <c:forEach items="${bookingRoomCounts}" var="bookingRoomCount">
+                            <tr>
+                                <td>${ bookingRoomCount.roomId }</td>
+                                <td>${ bookingRoomCount.roomName }</td>
+                                <td>${ bookingRoomCount.bookingCount }</td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+
         <a class="btn btn-primary" href="/JavaWeb_war_exploded">回首頁</a>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>

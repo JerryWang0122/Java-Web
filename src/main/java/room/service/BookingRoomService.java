@@ -2,6 +2,7 @@ package room.service;
 
 import room.dao.BookingRoomDao;
 import room.dao.BookingRoomDaoImpl;
+import room.model.dto.BookingRoomCount;
 import room.model.po.BookingRoom;
 
 import java.text.ParseException;
@@ -63,5 +64,9 @@ public class BookingRoomService {
 
     public boolean deleteBookingRoom(Integer bookingId) {
         return bookingRoomDao.delete(bookingId) > 0;
+    }
+
+    public List<BookingRoomCount> getBookingRoomCounts() {
+        return bookingRoomDao.getBookingRoomCounts();
     }
 }

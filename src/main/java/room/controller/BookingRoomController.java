@@ -54,6 +54,15 @@ public class BookingRoomController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        Integer roomId = Integer.valueOf(req.getParameter("room_id"));
+        String checkinDateStr = req.getParameter("checkin_date");
+
+        bookingRoomService.addBookingRoom(roomId, 1, checkinDateStr);
+
+        // 重導到首頁
+        // req.getContextPath(): /JavaWeb_war_exploded
+        System.out.println(req.getContextPath());
+        resp.sendRedirect(req.getContextPath() + "/booking_room");
+
     }
 }

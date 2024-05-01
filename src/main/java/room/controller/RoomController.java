@@ -35,7 +35,6 @@ public class RoomController extends HttpServlet {
         Integer roomId = Integer.valueOf(req.getParameter("roomId"));
         String roomName = req.getParameter("roomName");
         roomService.addRoom(roomId, roomName);
-        //TODO: 11:55
         resp.sendRedirect(req.getContextPath() + "/room");  // resp.sendRedirect("/JavaWeb_war_exploded/room");
     }
 }

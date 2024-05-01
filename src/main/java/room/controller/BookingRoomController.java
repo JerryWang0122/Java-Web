@@ -24,6 +24,15 @@ public class BookingRoomController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 處理 deleteId
+        String deleteId = req.getParameter("deleteId");
+        if (deleteId != null) {
+            bookingRoomService.deleteBookingRoom(Integer.valueOf(deleteId));
+            // 重新導入，消除deleteId
+            resp.sendRedirect(req.getContextPath() + "/booking_room");
+            return;
+        }
+
         // dto 列表
         List<BookingRoomDto> bookingRoomDtos = new ArrayList<>();
         // po -> dto
@@ -61,7 +70,6 @@ public class BookingRoomController extends HttpServlet {
 
         // 重導到首頁
         // req.getContextPath(): /JavaWeb_war_exploded
-        System.out.println(req.getContextPath());
         resp.sendRedirect(req.getContextPath() + "/booking_room");
 
     }

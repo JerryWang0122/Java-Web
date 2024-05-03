@@ -22,11 +22,13 @@ public class PassCodeFilter extends HttpFilter {
         // 檢查 request 是否有帶入 ?code=1234
         // String code = req.getParameter("code") == null ? "" : req.getParameter("code");
         String code = req.getParameter("code");
-        if ("1234".equals(code)) {  // 檢查參數 code 是否等於 1234
+        // 取得 session 中的 passCode
+        String passCode = session.getAttribute("passCode") + "";
+        if (passCode.equals(code)) {  // 檢查參數 code 是否等於 passCode
             // 將 code 的值寫入到 session 屬性中
             session.setAttribute("code", code);
             chain.doFilter(req, res);   // pass
-        } else if ("1234".equals(session.getAttribute("code"))) {
+        } else if (session.getAttribute("code") != null) {  // 檢查 session["code"] 是否有資訊
             chain.doFilter(req, res);
         } else {
             // res.getWriter().print("PassCode Error!");

@@ -12,7 +12,8 @@
         <form method="get">
             <fieldset>
                 <legend class="fs-3">Pass Code</legend>
-                Code：<input class="form-control w-25" id="code" name="code" placeholder="請輸入passcode" required type="number"><br>
+                Code：<input class="form-control w-25" id="code" name="code" placeholder="請輸入passcode" required type="number">
+                <img src="/JavaWeb_war_exploded/passcode" alt="" valign="middle"><br>
                 <input class="btn btn-primary" type="submit" value="Verify">
             </fieldset>
         </form>

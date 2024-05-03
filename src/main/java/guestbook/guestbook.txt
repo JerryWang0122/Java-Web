@@ -7,7 +7,7 @@
 訪客留言系統URL設計:
 http://localhost:8080/JavaWeb_war_exploded
 +-------------------------------------------+-----------------------------------------
-| Method | URI                              | Memo
+| Method | URI (Servlet Path)               | Memo
 +--------+----------------------------------+-----------------------------------------
 | GET    | /guestbook                       | 進入到GuestBook首頁
 | GET    | /guestbook?deleteId=123          | 刪除指定GuestBook紀錄

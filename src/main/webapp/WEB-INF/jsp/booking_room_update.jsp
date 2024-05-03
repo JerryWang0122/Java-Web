@@ -21,7 +21,7 @@
     <body style="padding: 15px">
 
         <!-- 修改 Booking Room -->
-        <form action="/JavaWeb_war_exploded//booking_room/update" method="post">
+        <form action="/JavaWeb_war_exploded/booking_room/update" method="post">
             <fieldset>
                 <legend class="fs-3">BookingRoom Update</legend>
 

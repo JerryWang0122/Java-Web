@@ -9,6 +9,23 @@
 | room_update.jsp | --> | RoomUpdateController |     +-------------+     +---------+
 +-----------------+     +----------------------+
 
+訂房系統系統URL設計:
+http://localhost:8080/JavaWeb_war_exploded
++----------------------------------------------+-----------------------------------------
+| Method | URI (Servlet Path)                  | Memo
++--------+-------------------------------------+-----------------------------------------
+| GET    | /room                               | 進入到 room 首頁
+| GET    | /room?deleteId=123                  | 刪除指定 room 紀錄
+| POST   | /room                               | 新增 room 紀錄
+| GET    | /room/update?roomId=123             | 進入到 room 修改頁面，並指定要修改的紀錄
+| POST   | /room/update                        | 修改 room 的紀錄
+| GET    | /booking_room                       | 進入到 booking_room 首頁
+| GET    | /booking_room?deleteId=123          | 刪除指定 booking_room 紀錄
+| POST   | /booking_room                       | 新增 booking_room 紀錄
+| GET    | /booking_room/update?bookingId=123  | 進入到 booking_room 修改頁面，並指定要修改的紀錄
+| POST   | /booking_room/update                | 修改 booking_room 的紀錄
++--------+-------------------------------------+-----------------------------------------
+
 model
  |-po (對應資料表的紀錄) (persistent object)
    |-Room.java

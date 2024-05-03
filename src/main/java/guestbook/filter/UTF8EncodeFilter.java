@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-// 過濾/攔截
+// 過濾/攔截 -> 管控 /guestbook 及其子路由
 @WebFilter("/guestbook/*")
 public class UTF8EncodeFilter extends HttpFilter {
     @Override

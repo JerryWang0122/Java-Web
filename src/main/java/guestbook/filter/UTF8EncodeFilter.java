@@ -21,6 +21,7 @@ public class UTF8EncodeFilter extends HttpFilter {
         res.setContentType("text/html;charset=UTF-8");
 
         // res.getWriter().print("UTF8Encode");
+        System.out.println("UTF8 Encoder Filter 編碼");
 
         // 往下繼續執行
         chain.doFilter(req, res);

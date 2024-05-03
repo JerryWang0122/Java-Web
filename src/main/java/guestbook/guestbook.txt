@@ -1,0 +1,48 @@
+訪客留言系統架構
+
++------+     +------------+      +---------+     +-----+
+| HTML | --> | Controller | -->  | Service | --> | DAO | --> MySQL(guestbook)
++------+     +------------+      +---------+     +-----+
+
+訪客留言系統URL設計:
+http://localhost:8080/JavaWeb_war_exploded
++-------------------------------------------+-----------------------------------------
+| Method | URI                              | Memo
++--------+----------------------------------+-----------------------------------------
+| GET    | /guestbook                       | 進入到GuestBook首頁
+| GET    | /guestbook?deleteId=123          | 刪除指定GuestBook紀錄
+| POST   | /guestbook                       | 新增GuestBook紀錄
+| GET    | /guestbook/update?updateId=123   | 進入到GuestBook修改頁面，並指定要修改的紀錄
+| POST   | /guestbook/update                | 修改GuestBook的紀錄
++--------+----------------------------------+-----------------------------------------
+
+model:
+ |- GuestBook.java 設計/定義訪客的紀錄資料
+
+View:
+    guestbook.jsp (主頁 - 含新增與列表)
+    guestbook_content.jspf (列表內容)
+    guestbook_update.jsp (新增完成頁面)
+    guestbook_result.jsp (修改頁面)
+
+Controller:
+ |-GuestBookController.java
+    |- GET (重導到首頁/刪除紀錄)
+    |- POST (新增紀錄)
+ |-GuestBookUpdateController.java
+    |- GET (得到要修改的紀錄)
+    |- POST (修改紀錄)
+
+Service:
+ |- GuestBookService.java (Interface) -> CRUD
+    |- GuestBookServiceImpl.java (Class) -> CRUD
+
+Dao:
+ |- GuestBookDao.java (Interface) -> CRUD
+    |- GuestBookDaoInMemory.java (Class) -> CRUD, InMemory
+    |- GuestBookDaoMySQL.java (Class) -> CRUD, MySQL => JdbcTemplate
+
+filter: (額外新增)
+ |- UTFEncodeFilter.java (過濾 /guestbook/* 路徑下所有內容都必須支援 UTF-8編碼)
+ |- PassCodeFilter.java (過濾 /guestbook 路徑必須帶入 ?code=1234 才可以進入首頁)
+

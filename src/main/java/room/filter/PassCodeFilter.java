@@ -1,6 +1,7 @@
 package room.filter;
 
 import jakarta.servlet.FilterChain;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpFilter;
@@ -10,7 +11,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter("/room/*")
+@WebFilter(urlPatterns = {"/room/*", "/booking_room/*"})
 public class PassCodeFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
@@ -28,7 +29,9 @@ public class PassCodeFilter extends HttpFilter {
         } else if ("1234".equals(session.getAttribute("code"))) {
             chain.doFilter(req, res);
         } else {
-            res.getWriter().print("PassCode Error!");
+            // res.getWriter().print("PassCode Error!");
+            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/jsp/passcode.jsp");
+            rd.forward(req, res);
         }
     }
 }

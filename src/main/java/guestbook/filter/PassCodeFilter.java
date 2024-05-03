@@ -20,10 +20,13 @@ public class PassCodeFilter extends HttpFilter {
         System.out.println("PassCodeFilter 過濾 " + req.getMethod());
 
         if (req.getMethod().equals("GET")) {
-            // 檢查 code 是否等於 1234
-            if (req.getParameter("code") == null || !req.getParameter("code").equals("1234")) {
-                res.getWriter().print("PassCode Error!");
-                return;
+            // 檢查是否有deleteId
+            if (req.getParameter("deleteId") == null) {
+                // 檢查 code 是否等於 1234
+                if (req.getParameter("code") == null || !req.getParameter("code").equals("1234")) {
+                    res.getWriter().print("PassCode Error!");
+                    return;
+                }
             }
         }
 

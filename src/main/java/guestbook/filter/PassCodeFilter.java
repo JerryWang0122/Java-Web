@@ -20,7 +20,7 @@ public class PassCodeFilter extends HttpFilter {
         System.out.println("PassCodeFilter 過濾 " + req.getMethod());
 
         if (req.getMethod().equals("GET")) {
-            // 檢查是否有deleteId
+            // 檢查是否有deleteId -> 因為有deleteId就代表已經登入，需要做刪除，沒有則需要額外做驗證
             if (req.getParameter("deleteId") == null) {
                 // 檢查 code 是否等於 1234
                 if (req.getParameter("code") == null || !req.getParameter("code").equals("1234")) {

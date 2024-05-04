@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: 5/1 上午 end">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/room_update.jsp" afterDir="false" />
+    <list default="true" id="149119cd-4464-42a9-b139-e0469a9ca66d" name="Changes" comment="feat: MyUser po">
+      <change afterPath="$PROJECT_DIR$/src/main/java/myuser/dao/MyUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myuser/dao/MyUserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myuser/model/dto/MyUserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myuser/model/po/MyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myuser/model/po/MyUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +29,9 @@
       <list>
         <option value="HTML File" />
         <option value="Jspx File" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -53,6 +55,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -62,34 +67,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.23.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.bmr_list.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jerrywang/Intellij-WorkSpace/JavaWeb/src/main/webapp/WEB-INF/jsp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
+    "Tomcat Server.bmr_list.jsp.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jerrywang/Intellij-WorkSpace/JavaWeb/src/main/webapp/WEB-INF/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/guestbook" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
     </key>
   </component>
@@ -201,199 +207,10 @@
       <workItem from="1714114616443" duration="67000" />
       <workItem from="1714114695043" duration="49165000" />
       <workItem from="1714468082089" duration="7734000" />
-      <workItem from="1714534195887" duration="6175000" />
-    </task>
-    <task id="LOCAL-00001" summary="feat: project init">
-      <option name="closed" value="true" />
-      <created>1714100708231</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1714100708231</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: complete bmi calculate">
-      <option name="closed" value="true" />
-      <created>1714110535820</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714110535820</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: change to post">
-      <option name="closed" value="true" />
-      <created>1714111302700</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714111302700</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: one stage">
-      <option name="closed" value="true" />
-      <created>1714119169282</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1714119169282</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: html爆破法完成">
-      <option name="closed" value="true" />
-      <created>1714119438925</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1714119438925</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat: 4/27課程">
-      <option name="closed" value="true" />
-      <created>1714211904022</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1714211904022</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat: 分派jsp">
-      <option name="closed" value="true" />
-      <created>1714356200842</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1714356200842</updated>
-    </task>
-    <task id="LOCAL-00008" summary="feat: req.setAttribute">
-      <option name="closed" value="true" />
-      <created>1714357261538</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1714357261538</updated>
-    </task>
-    <task id="LOCAL-00009" summary="feat: 上午第一次下課">
-      <option name="closed" value="true" />
-      <created>1714358606876</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714358606876</updated>
-    </task>
-    <task id="LOCAL-00010" summary="feat: 增加id 和 刪除鈕">
-      <option name="closed" value="true" />
-      <created>1714359768888</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1714359768888</updated>
-    </task>
-    <task id="LOCAL-00011" summary="feat: 移除資料">
-      <option name="closed" value="true" />
-      <created>1714360039244</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1714360039244</updated>
-    </task>
-    <task id="LOCAL-00012" summary="feat: finish">
-      <option name="closed" value="true" />
-      <created>1714360978473</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1714360978473</updated>
-    </task>
-    <task id="LOCAL-00013" summary="feat: GuestBook">
-      <option name="closed" value="true" />
-      <created>1714363569945</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1714363569945</updated>
-    </task>
-    <task id="LOCAL-00014" summary="feat: GuestBook class">
-      <option name="closed" value="true" />
-      <created>1714364666120</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1714364666120</updated>
-    </task>
-    <task id="LOCAL-00015" summary="feat: 4/29 上午">
-      <option name="closed" value="true" />
-      <created>1714369018051</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1714369018051</updated>
-    </task>
-    <task id="LOCAL-00016" summary="feat: In-Memory DAO">
-      <option name="closed" value="true" />
-      <created>1714369615006</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1714369615006</updated>
-    </task>
-    <task id="LOCAL-00017" summary="feat: Guest Book Service interface">
-      <option name="closed" value="true" />
-      <created>1714370334238</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1714370334238</updated>
-    </task>
-    <task id="LOCAL-00018" summary="feat: GuestBookDaoInMemory修正">
-      <option name="closed" value="true" />
-      <created>1714371075993</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1714371075993</updated>
-    </task>
-    <task id="LOCAL-00019" summary="feat: GuestBookServiceImpl finish">
-      <option name="closed" value="true" />
-      <created>1714371650316</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1714371650316</updated>
-    </task>
-    <task id="LOCAL-00020" summary="feat: 下課">
-      <option name="closed" value="true" />
-      <created>1714373363573</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1714373363573</updated>
-    </task>
-    <task id="LOCAL-00021" summary="feat: DAO In-Memory 修正">
-      <option name="closed" value="true" />
-      <created>1714373425480</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1714373425480</updated>
-    </task>
-    <task id="LOCAL-00022" summary="feat: 4/29下午第二次下課">
-      <option name="closed" value="true" />
-      <created>1714376345974</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1714376345974</updated>
-    </task>
-    <task id="LOCAL-00023" summary="feat: 刪除留言紀錄">
-      <option name="closed" value="true" />
-      <created>1714377379702</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1714377379702</updated>
-    </task>
-    <task id="LOCAL-00024" summary="feat: 4/29 Class End">
-      <option name="closed" value="true" />
-      <created>1714379521779</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1714379521779</updated>
+      <workItem from="1714534195887" duration="24651000" />
+      <workItem from="1714616737517" duration="1485000" />
+      <workItem from="1714624358831" duration="7695000" />
+      <workItem from="1714704268119" duration="24405000" />
     </task>
     <task id="LOCAL-00025" summary="feat: 4/30上課開始, 導入mysql, springframework MAVEN">
       <option name="closed" value="true" />
@@ -571,7 +388,223 @@
       <option name="project" value="LOCAL" />
       <updated>1714540409617</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="feat: update function finish">
+      <option name="closed" value="true" />
+      <created>1714542459905</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1714542459905</updated>
+    </task>
+    <task id="LOCAL-00048" summary="docs: document">
+      <option name="closed" value="true" />
+      <created>1714542564369</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1714542564369</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: booking room 瀏覽">
+      <option name="closed" value="true" />
+      <created>1714545621931</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1714545621931</updated>
+    </task>
+    <task id="LOCAL-00050" summary="feat: booking room 選項動態顯示">
+      <option name="closed" value="true" />
+      <created>1714546936082</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1714546936083</updated>
+    </task>
+    <task id="LOCAL-00051" summary="feat: booking room 新增預約">
+      <option name="closed" value="true" />
+      <created>1714547603332</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1714547603332</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat: booking room count">
+      <option name="closed" value="true" />
+      <created>1714549826079</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1714549826079</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix: booking room dao impl -&gt; booking count">
+      <option name="closed" value="true" />
+      <created>1714550170217</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1714550170217</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: booking room controller">
+      <option name="closed" value="true" />
+      <created>1714550206760</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1714550206760</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: booking room update controller">
+      <option name="closed" value="true" />
+      <created>1714555143551</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1714555143551</updated>
+    </task>
+    <task id="LOCAL-00056" summary="feat: booking room 統計列表">
+      <option name="closed" value="true" />
+      <created>1714555974050</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1714555974050</updated>
+    </task>
+    <task id="LOCAL-00057" summary="refactor: 使用c:if標籤處理選項selected判斷&#10;&#10;重點在於selected不需加引號">
+      <option name="closed" value="true" />
+      <created>1714574572277</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1714574572277</updated>
+    </task>
+    <task id="LOCAL-00058" summary="docs: 增加功能增加的紀錄">
+      <option name="closed" value="true" />
+      <created>1714700445200</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1714700445200</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: 初識filter">
+      <option name="closed" value="true" />
+      <created>1714704442122</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1714704442122</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: 使用filter完成編碼">
+      <option name="closed" value="true" />
+      <created>1714704814936</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1714704814936</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: 增加顯示">
+      <option name="closed" value="true" />
+      <created>1714704896858</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1714704896858</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: pass code filter v1">
+      <option name="closed" value="true" />
+      <created>1714707589871</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1714707589871</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: pass code filter 處理 deleteId">
+      <option name="closed" value="true" />
+      <created>1714708422607</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1714708422607</updated>
+    </task>
+    <task id="LOCAL-00064" summary="docs: guestbook規格">
+      <option name="closed" value="true" />
+      <created>1714715951989</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1714715951989</updated>
+    </task>
+    <task id="LOCAL-00065" summary="docs: guestbook規格(補)">
+      <option name="closed" value="true" />
+      <created>1714716170202</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1714716170202</updated>
+    </task>
+    <task id="LOCAL-00066" summary="docs: room規格(補)">
+      <option name="closed" value="true" />
+      <created>1714716919677</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1714716919677</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: PassCodeFilter for room (Session)">
+      <option name="closed" value="true" />
+      <created>1714721498178</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1714721498178</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat: PassCodeFilter (Session &amp; JSP)">
+      <option name="closed" value="true" />
+      <created>1714723386732</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1714723386732</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat: Customized Verified Code">
+      <option name="closed" value="true" />
+      <created>1714742571848</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1714742571848</updated>
+    </task>
+    <task id="LOCAL-00070" summary="docs: 5/3 Review">
+      <option name="closed" value="true" />
+      <created>1714748542253</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1714748542253</updated>
+    </task>
+    <task id="LOCAL-00071" summary="feat:sql 加上book room count">
+      <option name="closed" value="true" />
+      <created>1714789458571</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1714789458571</updated>
+    </task>
+    <task id="LOCAL-00072" summary="feat: 回家作業，同時預測試專案 myuser SQL">
+      <option name="closed" value="true" />
+      <created>1714789518134</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1714789518134</updated>
+    </task>
+    <task id="LOCAL-00073" summary="feat: MyUser po">
+      <option name="closed" value="true" />
+      <created>1714789938846</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1714789938846</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,32 +622,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: DAO In-Memory 修正" />
-    <MESSAGE value="feat: 4/29下午第二次下課" />
-    <MESSAGE value="feat: 刪除留言紀錄" />
-    <MESSAGE value="feat: 4/29 Class End" />
-    <MESSAGE value="feat: 4/30上課開始, 導入mysql, springframework MAVEN" />
-    <MESSAGE value="feat: 加入mysql" />
-    <MESSAGE value="feat: MySQL Dao finish" />
-    <MESSAGE value="feat: some notes" />
-    <MESSAGE value="feat: 使用mysql完成guessbook頁面" />
-    <MESSAGE value="feat: 增加update" />
-    <MESSAGE value="docs: query 的 details" />
-    <MESSAGE value="docs: update routing" />
-    <MESSAGE value="feat: 4/30上午課程結束" />
-    <MESSAGE value="docs: 訂房系統規劃說明" />
-    <MESSAGE value="feat: po 建立" />
-    <MESSAGE value="feat: dto" />
-    <MESSAGE value="docs: dao規劃" />
-    <MESSAGE value="feat: dao interface finish (第一次下課)" />
-    <MESSAGE value="feat: 單例設計" />
-    <MESSAGE value="feat: RoomDaoImpl finish" />
-    <MESSAGE value="feat: BookingRoomService" />
-    <MESSAGE value="feat: BookingRoomDaoImpl" />
-    <MESSAGE value="feat: RoomService" />
-    <MESSAGE value="feat: RoomUpdateController" />
-    <MESSAGE value="feat: 5/1 上午 end" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 5/1 上午 end" />
+    <MESSAGE value="feat: booking room 瀏覽" />
+    <MESSAGE value="feat: booking room 選項動態顯示" />
+    <MESSAGE value="feat: booking room 新增預約" />
+    <MESSAGE value="feat: booking room count" />
+    <MESSAGE value="fix: booking room dao impl -&gt; booking count" />
+    <MESSAGE value="feat: booking room controller" />
+    <MESSAGE value="feat: booking room update controller" />
+    <MESSAGE value="feat: booking room 統計列表" />
+    <MESSAGE value="refactor: 使用c:if標籤處理選項selected判斷&#10;&#10;重點在於selected不需加引號" />
+    <MESSAGE value="docs: 增加功能增加的紀錄" />
+    <MESSAGE value="feat: 初識filter" />
+    <MESSAGE value="feat: 使用filter完成編碼" />
+    <MESSAGE value="feat: 增加顯示" />
+    <MESSAGE value="feat: pass code filter v1" />
+    <MESSAGE value="feat: pass code filter 處理 deleteId" />
+    <MESSAGE value="docs: guestbook規格" />
+    <MESSAGE value="docs: guestbook規格(補)" />
+    <MESSAGE value="docs: room規格(補)" />
+    <MESSAGE value="feat: PassCodeFilter for room (Session)" />
+    <MESSAGE value="feat: PassCodeFilter (Session &amp; JSP)" />
+    <MESSAGE value="feat: Customized Verified Code" />
+    <MESSAGE value="docs: 5/3 Review" />
+    <MESSAGE value="feat:sql 加上book room count" />
+    <MESSAGE value="feat: 回家作業，同時預測試專案 myuser SQL" />
+    <MESSAGE value="feat: MyUser po" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: MyUser po" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

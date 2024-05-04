@@ -14,7 +14,7 @@ public class MyUserDaoImpl implements MyUserDao{
 
     @Override
     public MyUserDto findById(String empId) {
-        // root
+        // root, user
         String sql = "select id, name, dept, title, email, auth_level, create_time, update_time "+
                 "from myuser where id = ?";
         try {
@@ -34,7 +34,7 @@ public class MyUserDaoImpl implements MyUserDao{
 
     @Override
     public int create(MyUser user) {
-        // 一般 user
+        // 一般 user, register
         String sql = "insert into myuser (id, name, pwd, dept, title, email) values (?, ?, ?, ?, ?, ?)";
         return jdbcTemplate.update(sql, user.getId(), user.getName(), user.getPwd(),
                     user.getDept(), user.getTitle(), user.getEmail());

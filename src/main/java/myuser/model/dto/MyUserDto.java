@@ -1,14 +1,13 @@
-package myuser.model.po;
+package myuser.model.dto;
 
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class MyUser {
+public class MyUserDto {
     private String id;
     private String name;
-    private String pwd;
     private String dept;
     private String title;
     private String email;

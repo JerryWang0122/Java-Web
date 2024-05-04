@@ -15,7 +15,7 @@ public class MyUserDaoImpl implements MyUserDao{
     @Override
     public MyUserDto findById(String empId) {
         // root, user
-        String sql = "select id, name, dept, title, email, auth_level, create_time, update_time "+
+        String sql = "select id, name, dept, title, email, auth_level, create_date, update_date "+
                 "from myuser where id = ?";
         try {
             return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(MyUserDto.class), empId);
@@ -28,7 +28,7 @@ public class MyUserDaoImpl implements MyUserDao{
     @Override
     public List<MyUserDto> findAll() {
         // root
-        String sql = "select id, name, dept, title, email, auth_level, create_time, update_time from myuser";
+        String sql = "select id, name, dept, title, email, auth_level, create_date, update_date from myuser";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(MyUserDto.class));
     }
 

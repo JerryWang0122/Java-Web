@@ -61,20 +61,21 @@
                         <td>${user.title}</td>
                         <td>${user.email}</td>
                         <td>
+                            <%-- EL Language底層實現equals的方式跟Java不同，正規使用 eq 標籤  --%>
                             <c:choose>
-                                <c:when test="${user.authLevel == -1}">
+                                <c:when test="${user.authLevel eq -1}">
                                     無效
                                 </c:when>
-                                <c:when test="${user.authLevel == 0}">
+                                <c:when test="${user.authLevel eq 0}">
                                     註冊
                                 </c:when>
-                                <c:when test="${user.authLevel == 1}">
+                                <c:when test="${user.authLevel eq 1}">
                                     一般員工
                                 </c:when>
-                                <c:when test="${user.authLevel == 2}">
+                                <c:when test="${user.authLevel eq 2}">
                                     庫房人員
                                 </c:when>
-                                <c:when test="${user.authLevel == 3}">
+                                <c:when test="${user.authLevel eq 3}">
                                     Root
                                 </c:when>
                                 <c:otherwise>
@@ -91,11 +92,6 @@
                 </tbody>
             </table>
         </div>
-
-        <%--    TODO    --%>
-        <c:forEach items="${myusers}" var="user">
-            ${user.authLevel}等不等於2: ${user.authLevel.equals(2)}, ${user.authLevel == 2}, ${user.authLevel.getClass()}<br>
-        </c:forEach>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
